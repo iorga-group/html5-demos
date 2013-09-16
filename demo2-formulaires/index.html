@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang=fr>
+
+    <head>
+        <meta charset=UTF-8>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<script src="//code.jquery.com/jquery.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <title>Formulaire</title>
+        <style>
+            html {
+                height: 100%; 
+            }
+			
+        </style>
+    </head>
+
+    <body>
+        <section style="width: 600px; margin: 0 auto;">
+            <h1>Utilisation d'un Formulaire</h1>
+            <form id="foo" class="form-horizontal" role="form" >
+                <fieldset>
+                    <legend>Les nouveaux types d'entrées</legend>
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-texte">Texte</label>
+						<div class="col-lg-10">
+							<input class="form-control" type="text" id="field-texte"><br>
+						</div>
+					</div>
+					
+					<div class="form-group">	
+						<label class="col-lg-2 control-label" for="field-email">Mail</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-email" type="email" required><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-url">URL</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-url" type="url"><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-date">Date</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-date" type="date"><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-time">Heure</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-time" type="time"><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-month">Mois</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-month" type="month"><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-week">Semaine</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-week" type="week"><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-number">Nombre</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-number" type="number"><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-range">Slide</label>
+						<div class="col-lg-10">
+							<input id="field-range" type="range"><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-search">Recherche</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-search" type="search"><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-tel">Téléphone</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-tel" type="tel"><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-tel">Couleur</label>
+						<div class="col-lg-10">
+							<input id="field-color" type="color"><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-tel">Zone de texte</label>
+						<div class="col-lg-10">
+							<textarea class="form-control" id="field-area" form="foo"></textarea>
+						</div>
+					</div>
+                </fieldset>
+            </form>
+        </section>
+
+        <section style="width: 620px; margin: 0 auto;">
+            <h1>Les nouveaux attributs</h1>
+            <form class="form-horizontal" role="form">
+                <fieldset>
+                    <legend>Liste de données</legend>
+					<label class="col-lg-2 control-label" form="form-person-title">Fruits</label>
+					<div class="col-lg-10">
+						<input class="form-control" id="form-person-title" type="text" list="mylist">
+						<datalist id="mylist">
+							<option label="Banane" value="banana">
+							<option label="Pomme" value="apple">
+							<option label="Fraise" value="strawberry">
+						</datalist>
+					</div>
+                </fieldset>
+			</form>
+            
+			<form class="form-horizontal" role="form">
+                <fieldset>
+                    <legend>Autofocus</legend>
+                    <label class="col-lg-2 control-label" for="field-search-attr">Recherche</label>
+					<div class="col-lg-10">
+						<input class="form-control" id="field-search-attr" type="search" autofocus><br>
+					</div>
+                </fieldset>
+			</form>
+               
+			<form class="form-horizontal" role="form">
+                <fieldset>
+                    <legend>Placeholder</legend>
+                    <label class="col-lg-2 control-label" for="field-mail-attr">Mail</label>
+					<div class="col-lg-10">
+						<input class="form-control" id="field-mail-attr" type="email" placeholder="drouyer@iorga.com"><br>
+					</div>
+                </fieldset>
+			</form>
+                
+	        <form class="form-horizontal" role="form">
+                <fieldset>
+                    <legend>Required</legend>
+                    <label class="col-lg-2 control-label" for="field-pwd-attr">Mot de passe</label>
+					<div class="col-lg-10">
+						<input class="form-control" id="field-pwd-attr" type="password" required><br>
+					</div>
+                </fieldset>
+			</form>
+                
+			<form class="form-horizontal" role="form">
+                <fieldset>
+                    <legend>Multiple</legend>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-multiple-file-attr">Fichier(s)</label>
+						<div class="col-lg-10">
+							<input id="field-multiple-file-attr" type="file" multiple><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-mutiple-mail-attr">Email(s)</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-mutiple-mail-attr" type="email" multiple><br>
+						</div>
+					</div>
+					<div class="col-lg-offset-2 col-lg-10">
+						<button type="submit" class="btn btn-default">Valider</button>
+					</div>
+                </fieldset>
+			</form>
+                
+            <form class="form-horizontal" role="form">
+                <fieldset>
+                    <legend>Pattern</legend>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-pattern-attr">Exemple 1</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-pattern-attr" pattern="[0-9][A-Z]{3}" name="part" title="Un numéro est un chiffre suivit de 3 lettres majuscules" required><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-pattern2-attr">Exemple 2</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-pattern2-attr" pattern="[0-9][A-Z]{3}" name="part" placeholder="7ZZZ"><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-pattern3-attr">Exemple 3 (CP)</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-pattern3-attr" required pattern="[0-9]{5}(\-[0-9]{4})?" name=part title="Code postal (format 99999 ou 99999-9999)" ><br>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="field-pattern4-attr">Exemple 3 (CP UK)</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="field-pattern4-attr" required pattern="[0-9]{5}(\-[0-9]{4})?|[a-zA-Z]{1,2}\d{1,2}\s?\d[a-zA-Z]{1,2}" name="part" title="Code postal (UK)" ><br>
+							<script>/^(:?[a-zA-Z]{1,2}\d{1,2}\s?\d[a-zA-Z]{1,2})$/.test("bn14 8px")</script>
+						</div>
+					</div>
+					<div class="col-lg-offset-2 col-lg-10">
+						<button type="submit" class="btn btn-default">Valider</button>
+					</div>
+                </fieldset>
+			</form>
+                
+            <form class="form-horizontal" role="form">
+                <fieldset>
+                    <legend>Min/Max/Step</legend>
+                    <label class="col-lg-2 control-label" for="field-step-attr">Nombre</label>
+					<div class="col-lg-10">
+						<input class="form-control" id="field-step-attr" type="number" min="3" max="17" step="2" value="7"><br>
+					</div>
+					
+                    <label class="col-lg-2 control-label" for="field-step2-attr">Date</label>
+					<div class="col-lg-10">
+						<input class="form-control" id="field-step2-attr" type="date" min="2013-01-01" max="2013-12-31" value="2013-09-13"><br>
+					</div>
+					
+                    <label class="col-lg-2 control-label" for="field-step3-attr">Pourcentage</label>
+					<div class="col-lg-10">
+						<input class="form-control" id="field-step3-attr" type="number" min="0" max="100" step="5" value="50"><br>
+					</div>
+					
+                    <label class="col-lg-2 control-label" for="field-step4-attr">Temps</label>
+					<div class="col-lg-10">
+						<input class="form-control" id="field-step4-attr" name="favtime" type="time" step="any" value="23:00">
+					</div>
+                </fieldset>
+            </form>
+        </section>
+        
+        
+            
+        <section style="width: 620px; margin: 0 auto;">
+            <h1>Customisation des messages d'erreurs</h1>
+            <form class="form-horizontal" role="form">
+                <fieldset>
+                    <legend>Méthode setCustomValidity</legend>
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="dessert">Dessert</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="dessert" name="dessert" type="text" oninput="check(this)" />
+						</div>
+					</div>
+					<div class="col-lg-offset-2 col-lg-10">
+						<button type="submit" class="btn btn-default">Valider</button>
+					</div>
+                </fieldset>
+            </form>
+            <script>
+                function check(input) {
+					if (input.value == "pizza" || input.value == "frites" || input.value == "soupe") {
+						input.setCustomValidity('"' + input.value + '" n\'est pas un dessert.');
+					} else {
+						input.setCustomValidity('');
+					}
+				}
+            </script>
+            
+            <form class="form-horizontal" role="form">
+                <fieldset>
+                    <legend>Méthode willValidate</legend>
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="email_will_valid">Email</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="email_will_valid" name="email_will_valid" type="email" oninput="alert(document.getElementById('email_will_valid').willValidate);" />
+						</div>
+					</div>
+					<div class="col-lg-offset-2 col-lg-10">
+						<button type="submit" class="btn btn-default">Valider</button>
+					</div>
+                </fieldset>
+            </form>
+            
+            <form class="form-horizontal" role="form">
+                <fieldset>
+                    <legend>Attributs novalidate et formnovalidate</legend>
+					<div class="form-group">
+						<label class="col-lg-2 control-label" for="noval-email">Email</label>
+						<div class="col-lg-10">
+							<input class="form-control" id="noval-email" type="email" />
+						</div>
+					</div>
+					<div class="col-lg-offset-2 col-lg-10">
+						<input type="submit" class="btn btn-default" formnovalidate></button>
+					</div>
+                </fieldset>
+            </form>
+        </section>
+		<section style="height: 50px;"></section>
+    </body>
+</html>
